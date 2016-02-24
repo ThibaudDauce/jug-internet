@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Qu'est-ce qu'Internet − Thibaud Dauce</title>
+
+        <meta name="description" content="">
+        <meta name="author" content="Thibaud Dauce">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            Reveal.configure({ slideNumber: true });
+
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+        <style>
+            .reveal section .diagram {
+                font-size: 4rem;
+                line-height: 130px;
+                margin-top: 100px;
+                display: flex;
+                justify-content: space-around;
+            }
+            .reveal section .diagram img {
+                display: inline-block;
+                border: none;
+                box-shadow: none;
+                height: 130px;
+            }
+            .reveal section .diagram img, .reveal section .diagram div {
+                float: left;
+            }
+
+            .reveal section img.classic {
+                border: none;
+                box-shadow: none;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1>Qu'est-ce qu'Internet ?</h1>
+                    <h3>Java User Group — 23 février 2015</h3>
+                    <p>
+                        <small><a href="https://thibaud.dauce.fr">Thibaud Dauce</a></small>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Thibaud Dauce</h2>
+                    <h3>Co-fondateur</h3>
+                    <img src="images/quantic.png" alt="Quantic Telecom" class="classic"/>
+                    <p>
+                        <small>thibaud@quantic-telecom.net</small>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Fournisseurs d'Accès à Internet<br>&<br>Opérateurs de Télécommunications</h2>
+                </section>
+
+                <section>
+                    <h2>De votre ordinateur à votre FAI</h2>
+                    <div class="diagram">
+                        <img src="images/pc.svg" alt="PC"/>
+                        <div>…</div>
+                        <img src="images/box.svg" alt="Box"/>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>De votre FAI à Internet</h2>
+                    <div class="diagram">
+                        <img src="images/box.svg" alt="Box"/>
+                        <div>…</div>
+                        <img src="images/server.svg" alt="Server"/>
+                        <div>…</div>
+                        <img src="images/internet.svg" alt="Internet"/>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Votre FAI <strong>est</strong> Internet</h2>
+                    <img src="images/real-internet.svg" alt="Real Internet" style="border: none; box-shadow: none;"/>
+                </section>
+
+                <section>
+                    <h3>Différentes connexions entre les opérateurs</h3>
+                    <img src="images/routing.svg" alt="Routing" style="border: none; box-shadow: none;"/>
+                </section>
+
+                <section>
+                    <h2>Les échanges directs</h2>
+                    <img src="images/ix.svg" alt="IX" style="border: none; box-shadow: none;"/>
+                </section>
+
+                <section>
+                    <h2>Conclusion</h2>
+                    <ul>
+                        <li>Internet est un réseau très concret et <strong>PHYSIQUE</strong></li>
+                        <li>Tous les opérateurs <strong>SONT</strong> Internet</li>
+                        <li>Les échanges entre les opérateurs se font majoritairement de manière <strong>DIRECTE</strong></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                slideNumber: 'c/t',
+
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
